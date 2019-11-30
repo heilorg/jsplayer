@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MP3 Player</title>
-    <link rel="stylesheet" href="./app.css">
-    <script src="./Player.js"></script>
-    <script src="./PlayList.js"></script>
-    <script src="./App.js"></script>
+    <title>mp3 플레이어</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="Player.js"></script>
+    <script src="PlayList.js"></script>
+    <script src="App.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="main-row">
             <div id="player">
-                <audio src=""></audio>
                 <div class="info">
                     <div class="audio-info">
                         <div class="file-name">재생할 음악이 없습니다.</div>
                     </div>
-
                     <div class="time-info">
+                        <audio src=""></audio>
                         <div class="current-time">00:00:00</div>
                         <div class="total-time">00:00:00</div>
                     </div>
                 </div>
-
                 <div class="progress">
                     <div class="bar"></div>
                 </div>
@@ -35,17 +33,10 @@
                         <button id="playBtn">재생</button>
                         <button id="stopBtn">정지</button>
                     </div>
-
                     <div class="mode-btn">
-                        <div>
-                            <input type="radio" id="radio-1" name="repeat" value="0" checked> <label for="radio-1">반복없음</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="radio-2" name="repeat" value="1"> <label for="radio-2">한곡반복</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="radio-3" name="repeat" value="2"> <label for="radio-3">리스트반복</label>
-                        </div>
+                        <input type="radio" name="repeat" value="0" checked> 반복없음
+                        <input type="radio" name="repeat" value="1"> 한곡반복
+                        <input type="radio" name="repeat" value="2"> 리스트 반복
                     </div>
                 </div>
 
@@ -54,20 +45,27 @@
                 </div>
             </div>
 
-            <div id="play-list">
+            <div id="playList">
                 <ul class="item-list">
-                    <li class="item active">music1.mp3</li>
-                    <li class="item">music2.mp3</li>
-                    <li class="item">music3.mp3</li>
-                    <li class="item">music4music4music4music4music4.mp3</li>
+                    <li class="item active">sample0.mp4</li>
+                    <li class="item">samplsssssssssssssssssssssssse1.mp4</li>
+                    <li class="item">sample2.mp4</li>
+                    <li class="item">sample3.mp4</li>
                 </ul>
-
                 <div class="button-row">
                     <button id="openDialog" class="btn">+</button>
                     <input type="file" id="audioFile" multiple>
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <div id="contextMenu">
+        <ul>
+            <li id="del">삭제</li>
+            <li>취소</li>
+        </ul>
     </div>
 </body>
 </html>
